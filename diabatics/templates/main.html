@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/diabetic-disease-banner-glucose-meter-260nw-2164771527.webp'); /* Ensure path is correct */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        form {
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            color: purple; /* Change text color to purple */
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 10px 0;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: purple; /* Purple text inside the input */
+        }
+        input[type="text"]::placeholder {
+            color: #9370DB; /* Lighter purple for placeholders */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            text-align: center;
+            color: purple; /* Purple heading */
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="POST">
+        <h1>Diabetes Prediction Form</h1>
+        <table>
+            <tr>
+                <td><label for="Pregnancies">Pregnancies:</label></td>
+                <td><input type="text" id="Pregnancies" name="Pregnancies" required></td>
+            </tr>
+            <tr>
+                <td><label for="Glucose">Glucose:</label></td>
+                <td><input type="text" id="Glucose" name="Glucose" required></td>
+            </tr>
+            <tr>
+                <td><label for="BloodPressure">Blood Pressure:</label></td>
+                <td><input type="text" id="BloodPressure" name="BloodPressure" required></td>
+            </tr>
+            <tr>
+                <td><label for="SkinThickness">Skin Thickness:</label></td>
+                <td><input type="text" id="SkinThickness" name="SkinThickness" required></td>
+            </tr>
+            <tr>
+                <td><label for="Insulin">Insulin:</label></td>
+                <td><input type="text" id="Insulin" name="Insulin" required></td>
+            </tr>
+            <tr>
+                <td><label for="BMI">BMI:</label></td>
+                <td><input type="text" id="BMI" name="BMI" required></td>
+            </tr>
+            <tr>
+                <td><label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label></td>
+                <td><input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required></td>
+            </tr>
+            <tr>
+                <td><label for="Age">Age:</label></td>
+                <td><input type="text" id="Age" name="Age" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Predict</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
